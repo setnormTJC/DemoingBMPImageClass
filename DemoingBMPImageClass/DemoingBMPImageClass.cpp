@@ -14,27 +14,32 @@ int main()
 
     BMPImage mySpecialImage{ width, height };
 
-
-    for (int row = 0; row < height; ++row)
-    {
-        for (int col = 0; col < width; ++col)
-        {
-            if (col % 3 == 0)
-            {
-                mySpecialImage.setColor(Color{ 1.0f, 0.0f, 0.0f }, col, row);
-            }
-
-            else if (col % 3 == 1)
-            {
-                mySpecialImage.setColor(Color{ 0.0f, 1.0f, 0.0f }, col, row);
-            }
-
-            else
-            {
-                mySpecialImage.setColor(Color{ 0.0f, 0.0f, 1.0f }, col, row);
-            }
-    }
-}
+    mySpecialImage.drawLine( 0, 0, 100, 100, Color{ 0.0, 1.0, 0.0 });
+    //draw other line for 'X' (as in tic tac toe) 
+    mySpecialImage.drawLine(0, 100, 100, 0, Color{1.0, 0.0, 0.0});
+ 
+    mySpecialImage.drawCircle(50, 100, 100, Color{ 0.0, 0.0, 1.0 });
+//    red, green, and blue alternating "stripes" 
+//    for (int row = 0; row < height; ++row)
+//    {
+//        for (int col = 0; col < width; ++col)
+//        {
+//            if (col % 3 == 0)
+//            {
+//                mySpecialImage.setColor(Color{ 1.0f, 0.0f, 0.0f }, col, row);
+//            }
+//
+//            else if (col % 3 == 1)
+//            {
+//                mySpecialImage.setColor(Color{ 0.0f, 1.0f, 0.0f }, col, row);
+//            }
+//
+//            else
+//            {
+//                mySpecialImage.setColor(Color{ 0.0f, 0.0f, 1.0f }, col, row);
+//            }
+//    }
+//}
     //for (int currentRow = 0; currentRow < height; ++currentRow)
     //{
     //    for (int currentCol = 0; currentCol < width; ++currentCol)

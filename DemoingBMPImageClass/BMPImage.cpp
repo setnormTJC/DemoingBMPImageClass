@@ -172,3 +172,27 @@ void BMPImage::ExportBMPFile(const char* _path) const
 
 	std::cout << "File created and closed, it is located in the project repository \n";
 }
+
+void BMPImage::drawLine(int x0, int y0, int x1, int y1, const Color& color)
+{
+	double m = (double)(y1 - y0) / (x1 - x0);
+
+	double b = y0 - m * x0; 
+
+	for (int x = x0; x < x1; ++x)
+	{
+		int y = (int)(m * x + b); 
+		setColor(color, x, y); 
+	}
+	
+}
+
+void BMPImage::drawCircle(int radius, int xCenter, int yCenter, const Color& color)
+{
+	//equation of a circle: x^2 + y^2 = r^2 
+	for (int x = -radius; x <= radius; ++x)
+	{
+		int y = (int)std::sqrt(radius * radius - x * x);
+		setColor(color, xCenter + x, y); //one octant of circle? 
+	}
+}
