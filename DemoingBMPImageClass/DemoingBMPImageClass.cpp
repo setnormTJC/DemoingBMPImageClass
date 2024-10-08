@@ -3,8 +3,9 @@
 
 #include <iostream>
 
-#include"C:/Users/Work/Downloads/ImageFileGeneration/BMPImage.h"
-#include"C:/Users/Work/Downloads/ImageFileGeneration/BMPImage.cpp"
+#include"BMPImage.h"
+//#include"C:/Users/Work/Downloads/ImageFileGeneration/BMPImage.h"
+//#include"C:/Users/Work/Downloads/ImageFileGeneration/BMPImage.cpp"
 
 int main()
 {
